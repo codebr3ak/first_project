@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from forms import RegistrationForm, LoginForm
 app = Flask(__name__)
 
@@ -35,7 +35,7 @@ def register():
     return render_template('register.html', title='Register', form=form)
 
 @app.route("/register")
-def register():
+def login():
     form = LoginForm()
     return render_template('login.html', title='Login', form=form)
 
